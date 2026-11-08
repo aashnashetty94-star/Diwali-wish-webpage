@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Birthday Surprise</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.birthdayimg {
+    background-image: url("https://tse4.mm.bing.net/th/id/OIP.nx_gMy5sLEyaHrLrNZAv3gHaJ4?r=0&w=693&h=924&rs=1&pid=ImgDetMain&o=7&rm=3");
+
+    height: 100vh;
+    height: 100dvh;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+    color: white;
+    font-size: 20px;
+}
+
+.middle {
+    position: absolute;
+    width: 90%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+hr {
+    margin: auto;
+    width: 40%;
+}
+
+#amx {
+    font-size: 40px;
+}
+
+#openText {
+    display: none;
+    font-size: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="birthdayimg">
+
+    <div class="middle">
+
+        <h1>Yooo</h1>
+
+        <hr>
+
+        <p id="amx"></p>
+
+        <p id="openText">
+            Opening surprise in 3..2..1...
+        </p>
+
+    </div>
+
+</div>
+
+<script>
+
+// CHANGE THIS TO YOUR ACTUAL TARGET DATE
+var countDownDate =
+    new Date("April 7, 2026 00:00:00").getTime();
+
+var countdownfunction = setInterval(function() {
+
+    var now = new Date().getTime();
+
+    var distance = countDownDate - now;
+
+    var days = Math.floor(
+        distance / (1000 * 60 * 60 * 24)
+    );
+
+    var hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60)
+    );
+
+    var minutes = Math.floor(
+        (distance % (1000 * 60 * 60)) /
+        (1000 * 60)
+    );
+
+    var seconds = Math.floor(
+        (distance % (1000 * 60)) / 1000
+    );
+
+    if (distance < 0) {
+
+        clearInterval(countdownfunction);
+
+        document.getElementById("amx").innerHTML =
+            "HAPPY DIWALI AUNTTYYY JIII";
+
+        document.getElementById("openText").style.display =
+            "block";
+
+        setTimeout(function() {
+
+            window.location.href =
+            "https://www.youtube.com/shorts/Vh9FETBCLl8";
+
+        }, 3000);
+
+    } else {
+
+        document.getElementById("amx").innerHTML =
+            days + "D " +
+            hours + "H " +
+            minutes + "M " +
+            seconds + "S";
+
+    }
+
+}, 1000);
+
+</script>
+
+</body>
+</html>
